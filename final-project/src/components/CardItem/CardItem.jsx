@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 function CardItem(props) {
-    const {path, label, src, text} = props;
+    const {path, label, src, country, title, subtitle, dates, duration, price} = props;
     return (
         <>
             <li className='cards__item'>
@@ -14,7 +14,12 @@ function CardItem(props) {
                             className='cards__img'/>
                     </figure>
                     <div className='cards__info'>
-                        <h5 className='cards__text'>{text}</h5>
+                        <h5>Страна: {country}</h5>
+                        <h5 className='cards__text'>Тур: {title}</h5>
+                        <p>Описание: {subtitle}</p>
+                        <p>Даты: {dates}</p>
+                        <p>Продолжительность: {duration}</p>
+                        <p>Стоимость: {price}</p>
                     </div>
                 </Link>
             </li>
