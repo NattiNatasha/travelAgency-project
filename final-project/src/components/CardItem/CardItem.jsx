@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Button} from "../Button/Button";
 
 function CardItem(props) {
     const {path, label, src, country, title, subtitle, dates, duration, price} = props;
@@ -14,12 +15,18 @@ function CardItem(props) {
                             className='cards__img'/>
                     </figure>
                     <div className='cards__info'>
-                        <h5>Страна: {country}</h5>
-                        <h5 className='cards__text'>Тур: {title}</h5>
-                        <p>Описание: {subtitle}</p>
-                        <p>Даты: {dates}</p>
-                        <p>Продолжительность: {duration}</p>
-                        <p>Стоимость: {price}</p>
+                        <h5 className='country'>Страна: {country}</h5>
+                        <h5 className='title'>Тур: {title}</h5>
+                        <p className='subtitle'>Описание: {subtitle}</p>
+                        <p className='dates'>Даты: {dates}</p>
+                        <p className='duration'>Продолжительность: {duration}</p>
+                        <p className='price'>Стоимость: {price}</p>
+                        <Button className='cards__button'
+                            buttonStyle='btn--primary'
+                            buttonSize='btn--medium'
+                        >
+                            ВЫБРАТЬ ТУР
+                        </Button>
                     </div>
                 </Link>
             </li>

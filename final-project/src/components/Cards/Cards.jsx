@@ -1,6 +1,8 @@
 import React from "react";
 import CardItem from "../CardItem/CardItem";
 import './Cards.css';
+import {Button} from "../Button/Button";
+import {Link} from "react-router-dom";
 
 function Cards() {
     return (
@@ -17,7 +19,7 @@ function Cards() {
                             duration='6 дней'
                             price='600'
                             label='Гастрономический'
-                            path='/services'/>
+                            path='/services' />
                         <CardItem
                             src='/img/MachuPicchu.png'
                             country='Франция'
