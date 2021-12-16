@@ -25,7 +25,7 @@ function CardItem(props) {
                             buttonStyle='btn--primary'
                             buttonSize='btn--medium'
                         >
-                            ВЫБРАТЬ ТУР
+                            ЗАКАЗАТЬ
                         </Button>
                     </div>
                 </Link>
