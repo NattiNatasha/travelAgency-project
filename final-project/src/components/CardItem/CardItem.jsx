@@ -21,12 +21,11 @@ const CardItem = ({cards}) => {
                         <p className='dates'>Даты: {dates}</p>
                         <p className='duration'>Продолжительность: {duration}</p>
                         <p className='price'>Стоимость: {price}</p>
-                        <Button className='cards__button'
-                            buttonStyle='btn--primary'
-                            buttonSize='btn--medium'
-                        >
-                            ЗАКАЗАТЬ
-                        </Button>
+                        <div>
+                           <Link to='/order'>
+                              <Button className='cards__button' buttonStyle={'btn--primary'} buttonSize='btn--medium'>ЗАКАЗАТЬ</Button>
+                           </Link>
+                        </div>
                     </div>
                 </div>
             </li>
