@@ -50,7 +50,7 @@ function Header (handleLogout) {
                             </Link>
                         </li>
                         <li className='header-menu__item'>
-                            <Link to='/edit-tour' className='header-menu__links' onClick={closeMobileMenu}>
+                            <Link to='/orders' className='header-menu__links' onClick={closeMobileMenu}>
                                 Заявки
                             </Link>
                         </li>
