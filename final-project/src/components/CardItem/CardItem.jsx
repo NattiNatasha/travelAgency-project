@@ -2,21 +2,21 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {Button} from "../Button/Button";
 
-function CardItem(props) {
-    const {path, label, src, country, title, subtitle, dates, duration, price} = props;
+const CardItem = ({cards}) => {
+    const {label, src, alt, country, title, subtitle, dates, duration, price} = cards;
     return (
         <>
             <li className='cards__item'>
-                <Link className='cards__link' to={path}>
+                <div className='cards__wrap'>
                     <figure className='cards__img-wrap' data-category={label}>
                         <img
                             src={src}
-                            alt='Travel Image'
+                            alt={alt}
                             className='cards__img'/>
                     </figure>
                     <div className='cards__info'>
-                        <h5 className='country'>Страна: {country}</h5>
-                        <h5 className='title'>Тур: {title}</h5>
+                        <h4 className='country'>Страна: {country}</h4>
+                        <h4 className='title'>Тур: {title}</h4>
                         <p className='subtitle'>Описание: {subtitle}</p>
                         <p className='dates'>Даты: {dates}</p>
                         <p className='duration'>Продолжительность: {duration}</p>
@@ -28,7 +28,7 @@ function CardItem(props) {
                             ЗАКАЗАТЬ
                         </Button>
                     </div>
-                </Link>
+                </div>
             </li>
         </>
     )

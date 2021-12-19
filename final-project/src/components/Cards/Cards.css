@@ -34,7 +34,7 @@
     border-radius: 15px;
 }
 
-.cards__link {
+.cards__wrap {
     display: flex;
     flex-flow: column;
     width: 100%;

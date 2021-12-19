@@ -3,7 +3,7 @@ import './Header.css'
 import {Link} from "react-router-dom";
 import {Button} from "../Button/Button";
 
-function Header () {
+function Header (handleLogout) {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
     const handleClick = () => setClick(!click);
