@@ -49,6 +49,11 @@ function Header (handleLogout) {
                                 Редактировать тур
                             </Link>
                         </li>
+                        <li className='header-menu__item'>
+                            <Link to='/orders' className='header-menu__links' onClick={closeMobileMenu}>
+                                Заявки
+                            </Link>
+                        </li>
                     </ul>
                     <div>
                         <Link to='/log-in'>
