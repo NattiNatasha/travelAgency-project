@@ -3,9 +3,10 @@ import './Header.css'
 import {Link} from "react-router-dom";
 import {Button} from "../Button/Button";
 
-function Header (handleLogout) {
+function Header () {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
+
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
@@ -54,12 +55,15 @@ function Header (handleLogout) {
                                 Заявки
                             </Link>
                         </li>
+                        <li>
+                            <Link to='/log-in' className='header-menu__links-mobile' onClick={closeMobileMenu}>
+                                Sign In
+                            </Link>
+                        </li>
                     </ul>
-                    <div>
-                        <Link to='/log-in'>
-                            {button && <Button buttonStyle={'btn--outlineWhite'}>SIGN IN</Button>}
-                        </Link>
-                    </div>
+                    <Link to='/log-in' className='btn-mobile'>
+                    {button && <Button buttonStyle='btn--outlineWhite' buttonSize='btn--large'>SIGN IN</Button>}
+                    </Link>
                 </div>
             </header>
         </>
