@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import '../../App.css';
-import {Redirect} from "react-router-dom";
+import OrderForm from "../OrderForm/OrderForm";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function OrderFormPage () {
-    return (
-        <h1>OrderForm</h1>
-    )
-}
+        return (
+            <>
+                <Header />
+                <OrderForm/>
+                <Footer/>
+            </>
+        )
+    }
 
-export default OrderFormPage;
+    export default OrderFormPage;
