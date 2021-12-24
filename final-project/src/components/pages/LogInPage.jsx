@@ -1,17 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import '../../App.css';
-import AuthForm from "../AuthForm/AuthForm";
+import App from '../../App.js'
+import LoginForm from '../LoginForm/LoginForm';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-function LogIn () {
+function LogInPage () {
         return (
             <>
                 <Header />
-                <AuthForm/>
-                <Footer/>
+                <LoginForm />
+                <Footer />
             </>
-        )
-    }
+        );
+  }
 
-    export default LogIn;
+export default LogInPage;

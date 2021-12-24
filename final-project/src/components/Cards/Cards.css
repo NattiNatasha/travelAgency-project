@@ -98,6 +98,41 @@
     padding-top: 15px;
 }
 
+.loading {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.loading h2 {
+    padding-top: 20px;
+    color: darkgoldenrod;
+}
+
+.loading-img {
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+img.rot {
+    animation: 2s linear 0s normal none infinite running rot;
+    width: 100px;
+}
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 @media only screen and (min-width: 1024px) {
     .cards__items {
         display: flex;

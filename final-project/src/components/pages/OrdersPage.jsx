@@ -1,12 +1,16 @@
-import React from "react";
-import '../../App.css';
-import {Redirect} from "react-router-dom";
+import React, {useState, useContext} from 'react';
+import LogInPage from '../../components/pages/LogInPage';
+import {Link, useHistory} from 'react-router-dom';
 
-function OrdersPage () {
-    alert('Для просмотра заявок необходимо пройти авторизацию');
+
+const OrdersPage = () => {
+
+
     return (
-        <Redirect to='/log-in' />
+    <>
+        <h1>Заявки</h1>
+    </>
     )
-}
+};
 
 export default OrdersPage;

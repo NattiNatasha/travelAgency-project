@@ -1,14 +1,19 @@
 import React, {useContext} from "react";
 import CardItem from "../CardItem/CardItem";
 import './Cards.css';
-import {AppContext} from "../../App";
+import {ToursContext} from '../../Context';
 
 const  Cards = () => {
-    const {tours} = useContext(AppContext);
+    const {tours} = useContext(ToursContext);
 
     if(!tours.length) {
         return (
-            <div>Loading...</div>
+            <div className='loading'>
+                <h2>Ищем самые лучшие предложения, мы почти у цели!</h2>
+                <div className='loading-img'>
+                    <img className='rot' src='https://cdn3.iconfinder.com/data/icons/internet-1-11/48/42-128.png' alt=''/>
+                </div>
+            </div>
         )
     }
     return (

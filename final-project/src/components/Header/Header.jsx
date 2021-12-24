@@ -46,24 +46,11 @@ function Header () {
                             </Link>
                         </li>
                         <li className='header-menu__item'>
-                            <Link to='/edit-tour' className='header-menu__links' onClick={closeMobileMenu}>
-                                Редактировать тур
-                            </Link>
-                        </li>
-                        <li className='header-menu__item'>
                             <Link to='/orders' className='header-menu__links' onClick={closeMobileMenu}>
-                                Заявки
+                                CRM
                             </Link>
                         </li>
-                        <li>
-                            <Link to='/log-in' className='header-menu__links-mobile' onClick={closeMobileMenu}>
-                                Sign In
-                            </Link>
-                        </li>
-                    </ul>
-                    <Link to='/log-in' className='btn-mobile'>
-                    {button && <Button buttonStyle='btn--outlineWhite' buttonSize='btn--large'>SIGN IN</Button>}
-                    </Link>
+                   </ul>
                 </div>
             </header>
         </>

@@ -12,7 +12,6 @@ function MainContent() {
             <div className='content__btn'>
                 <Link to='/tours'>
                 <Button
-                    buttonStyle='btn--outlineBisque'
                     buttonSize='btn--large'
                 >
                     ВЫБРАТЬ ТУР

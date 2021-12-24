@@ -1,39 +1,56 @@
 import React, {createContext, useEffect, useState} from "react";
 import './App.css';
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route, Redirect} from "react-router-dom";
 import HomePage from './components/pages/HomePage'
 import ToursPage from './components/pages/ToursPage';
 import LogInPage from './components/pages/LogInPage';
-import EditTourPage from "./components/pages/EditTourPage";
 import OrderFormPage from "./components/pages/OrderFormPage";
 import OrdersPage from "./components/pages/OrdersPage";
-import {cards} from "./DatabaseTours";
+import ThanksPage from "./components/pages/ThanksPage";
+import {getDatabaseWithDelay} from "./components/api";
+import {ToursContext, AuthContext} from './Context';
 
-export const AppContext = createContext(null);
 function App() {
 
     const [tours, setTours] = useState([]);
     const [isAuth, setIsAuth] = useState(false);
 
-    useEffect(() => {
-        const response = cards;
-        setTours(response)
-    }, [])
+    const RequireAuth = ({children}) => {
+        if (!isAuth) {
+            return <Redirect to='/login' />;
+        }
+        return children;
+    }
+
+    async function getTours() {
+        const tours = await getDatabaseWithDelay;
+        setTours(tours)
+    }
+
+    getTours().then(r => {});
 
     return (
-    <>
-        <AppContext.Provider value={{tours, setTours, isAuth, setIsAuth}}>
-            <Switch>
-                <Route exact path='/' component={HomePage} />
-                <Route exact path='/tours' component={ToursPage} />
-                <Route exact path='/log-in' component={LogInPage} />
-                <Route exact path='/edit-tour' component={EditTourPage} />
-                <Route exact path='/order' component={OrderFormPage} />
-                <Route exact path='/orders' component={OrdersPage} />
-            </Switch>
-        </AppContext.Provider>
-    </>
-  );
+        <ToursContext.Provider value={{
+            tours,
+            setTours
+        }}>
+            <AuthContext.Provider value={{
+                isAuth,
+                setIsAuth
+            }}>
+                <Switch>
+                    <Route exact path='/' component={HomePage} />
+                    <Route exact path='/tours' component={ToursPage} />
+                    <Route exact path='/login' component={LogInPage} />
+                    <Route exact path='/thanks' component={ThanksPage} />
+                    <Route exact path='/make-order' component={OrderFormPage} />
+                    <RequireAuth>
+                        <Route exact path='/orders' component={OrdersPage} />
+                    </RequireAuth>}
+                </Switch>
+            </AuthContext.Provider>
+        </ToursContext.Provider>
+    )
 }
 
 export default App;

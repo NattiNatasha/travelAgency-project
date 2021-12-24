@@ -1,33 +1,20 @@
 .btn{
+    display: inline-block;
     padding: 8px 20px;
-    border-radius: 2px;
+    border-radius: 8px;
     outline: none;
     border: none;
+    background-image: linear-gradient(to right, goldenrod 50%, goldenrod 50%, #FE4880);
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: #ffffff;
+    font-weight: 700;
     cursor: pointer;
 }
 
-.btn--primary{
-    background-color: darkgoldenrod;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid darkgoldenrod;
-    transition: all 0.3s ease-out;
-}
-
-.btn--outlineWhite{
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
-}
-
-.btn--outlineBisque{
-    background-color: transparent;
-    color: bisque;
-    padding: 8px 20px;
-    border: 1px solid bisque;
-    transition: all 0.3s ease-out;
+.btn:hover {
+    background-position: 100% 0%;
 }
 
 .btn--medium{
@@ -38,21 +25,4 @@
 .btn--large{
     padding: 12px 26px;
     font-size: 20px;
-}
-
-.btn--outlineWhite:hover {
-    background-color: #fff;
-    color: darkgoldenrod;
-    transition: all 0.3s ease-out;
-}
-
-.btn--outlineBisque:hover {
-    background-color: bisque;
-    color: #242424;
-    transition: all 0.3s ease-out;
-}
-
-.btn--primary:hover {
-    background-color: rgba(184, 134, 11, 0.8);
-    transition: all 0.3s ease-out;
 }

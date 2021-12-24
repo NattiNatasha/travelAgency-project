@@ -5,7 +5,7 @@ input, button {
     outline: none;
 }
 
-.order-form-container {
+.form-container {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -13,13 +13,13 @@ input, button {
     background-color: #53565A;
 }
 
-.order-form {
+.form {
     display: block;
     position: relative;
     width: 600px;
 }
 
-.order-form:after {
+.form:after {
     content: '';
     display: block;
     position: absolute;
@@ -30,7 +30,7 @@ input, button {
     z-index: 1;
     background-image: linear-gradient(to bottom right, #FFCE00, #FE4880);
 }
-.order-form-inner {
+.form-inner {
     position: relative;
     display: block;
     background-color: #FFF;
@@ -38,20 +38,21 @@ input, button {
     z-index: 2;
 }
 
-.order-form-inner h1 {
+.form-inner h1 {
     color: #888;
     font-size: 38px;
     font-weight: 500;
     margin-bottom: 30px;
 }
 
-.order-form-group {
-    display: block;
+.form-group {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
-.order-form-group label {
+.form-group label {
     display: block;
     color: #666;
     font-size: 16px;
@@ -59,11 +60,11 @@ input, button {
     transition: 0.4s;
 }
 
-.order-form-group:focus-within label {
+.form-group:focus-within label {
     color: #FE4880;
 }
 
-.order-form-group input {
+.form-group input {
     display: block;
     width: 100%;
     padding: 10px 15px;
@@ -72,6 +73,11 @@ input, button {
     transition: 0.4s;
 }
 
-.order-form-group input:focus {
+.form-group input:focus {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
+
+.error {
+    color: red;
+}
+
