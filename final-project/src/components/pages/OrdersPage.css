@@ -1,0 +1,26 @@
+.no-orders {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.no-orders h2 {
+    padding-top: 20px;
+    color: darkgoldenrod;
+    font-size: 38px;
+}
+
+.no-orders-img {
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+button {
+    width: fit-content;
+    margin: 0 auto;
+}

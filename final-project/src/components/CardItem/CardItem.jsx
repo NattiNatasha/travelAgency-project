@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {Button} from "../Button/Button";
 
 const CardItem = ({cards}) => {
-    const {label, src, alt, country, title, subtitle, dates, duration, price} = cards;
+    const {id, label, src, alt, country, title, subtitle, dates, duration, price} = cards;
     return (
         <>
             <li className='cards__item'>
@@ -23,7 +23,7 @@ const CardItem = ({cards}) => {
                         <p className='price'>Стоимость: {price}</p>
                         <div>
                             <Link to='/make-order'>
-                           <Button className='cards__button' buttonStyle={'btn--primary'} buttonSize='btn--medium'>ЗАКАЗАТЬ</Button>
+                           <Button className='cards__button'  buttonSize='button-medium'>ЗАКАЗАТЬ</Button>
                            </Link>
                         </div>
                     </div>
