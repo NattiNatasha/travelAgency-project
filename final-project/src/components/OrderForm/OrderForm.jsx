@@ -1,11 +1,9 @@
 import React, {useState,useEffect} from 'react';
 import './OrderForm.css';
-import {useHistory} from "react-router-dom";
 import { Button } from '../Button/Button';
 
 const OrderForm = () => {
 
-    const history = useHistory();
     const getDataFromLS=()=>{
           const data = localStorage.getItem('orders');
           if(data){
@@ -16,7 +14,7 @@ const OrderForm = () => {
           }
         }
 
-        const [orders, setOrders]=useState(getDataFromLS());
+    const [orders, setOrders]=useState(getDataFromLS());
 
     const [tourName, setTourName] = useState('')
     const [name, setName] = useState('')
@@ -33,7 +31,7 @@ const OrderForm = () => {
         setTourName('');
         setName('');
         setPhone('');
-
+        alert('Спасибо за заявку! Менеджер свяжется с вами в течение 10 минут, чтобы обсудить детали')
     }
 
       useEffect(()=>{
@@ -58,14 +56,15 @@ const OrderForm = () => {
                         <input type='text' name='text' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                     </div>
                     <Button
-                       type='submit'
                        buttonSize='btn--large'
+                       type='submit'
                        >
                        ОТПРАВИТЬ ЗАЯВКУ
                     </Button>
                 </div>
             </form>
         </div>
+
     );
 }
 

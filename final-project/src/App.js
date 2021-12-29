@@ -6,7 +6,6 @@ import ToursPage from './components/pages/ToursPage';
 import LogInPage from './components/pages/LogInPage';
 import OrderFormPage from "./components/pages/OrderFormPage";
 import OrdersPage from "./components/pages/OrdersPage";
-import ThanksPage from "./components/pages/ThanksPage";
 import {getDatabaseWithDelay} from "./components/api";
 import {ToursContext, AuthContext} from './Context';
 
@@ -42,7 +41,6 @@ function App() {
                     <Route exact path='/' component={HomePage} />
                     <Route exact path='/tours' component={ToursPage} />
                     <Route exact path='/login' component={LogInPage} />
-                    <Route exact path='/thanks' component={ThanksPage} />
                     <Route exact path='/make-order' component={OrderFormPage} />
                     <RequireAuth>
                         <Route exact path='/orders' component={OrdersPage} />
