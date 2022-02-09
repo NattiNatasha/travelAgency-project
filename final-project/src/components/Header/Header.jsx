@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Header.css'
 import {Link} from "react-router-dom";
-import {Button} from "../Button/Button";
 
 function Header () {
     const [click, setClick] = useState(false);

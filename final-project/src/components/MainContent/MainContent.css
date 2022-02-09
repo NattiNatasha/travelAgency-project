@@ -1,6 +1,6 @@
 .content__container {
     background: url('../../assets/img/Barcelona.jpg') center center/cover no-repeat;
-    height: 97vh;
+    min-height: calc(100vh - 100px);
     width: 100%;
     display: flex;
     flex-direction: column;
